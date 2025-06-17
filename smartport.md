@@ -21,7 +21,7 @@ Les "blocks" font tous 512 octets sur disque.
 
 S'active soit en premier, soit s'il n'y a pas de disquette en `$C600`, selon la ROM.  
 Charge les premiers blocks (de 512 octets) en `$800` (comme le Disk II)  
-Au moment d'appeler la routine du boot block, donne le numéro du DEVICE actif dans `X` sous la forme `$x0`  (par ex lecteur 1 en slot 5 : `X=$50`)  
+Au moment d'appeler la routine du boot block, donne le numéro du DEVICE actif dans `X` sous la forme `$sd` (slot+device)  (par ex lecteur 1 en slot 5 : `X=$50`)  
 
 Format du bootblock, identique à celui du boot secteur Disk II:  
 `$800` => nombre de blocks à charger au boot (je ne sais pas si c'est vraiment utilisé)  
