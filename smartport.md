@@ -29,10 +29,13 @@ Format du bootblock, identique à celui du boot secteur Disk II:
 
 ## Appel Smartport
 
+DIX utilise un appel direct au firmware de la carte en `$Cx0A` mais d'après la documentation officielle, les vrais appels "officiels" sont un peu différents (les paramètres se trouvent juste après le JSR au lieu d'être en $42).  
+
 ### Structure de paramètres en $42  
 
 `$42` Commande Smartport (ex. $01)  
 `$43` Device Smartport (ex. $50)  
+Paramètres :  
 `$44+$45` adresse RAM destination (pour read/write)  
 `$46+$47` numéro du block à lire/écrire (pour read/write)
 
@@ -41,6 +44,7 @@ Format du bootblock, identique à celui du boot secteur Disk II:
 `JSR $Cx0A`  
 
 Retour:  
+`C` Carry flag=1 si erreur  
 `A` = error code (`$00` = pas d'erreur)  
 `X et Y` = ça dépend de l'appel  
 
