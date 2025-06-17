@@ -3,6 +3,8 @@
 Ces infos proviennent de http://apple2.guidero.us/doku.php/articles/iicplus_smartport_secrets  
 Il y a aussi https://www.bigmessowires.com/2015/06/11/apple-ii-hard-disk-emulation/
 
+VERSION COMPLÈTE : https://www.brutaldeluxe.fr/documentation/iwm/iwm_protocolconverter.pdf
+
 Les cartes Smartport sont apparemment en slot 5 de façon standard mais ça n'est pas une obligation.
 
 ## Format
